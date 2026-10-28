@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natal</title>
+    <link href="../style.css" rel="stylesheet" type="text/css">
+    <style>
+        body {
+        cursor: none;
+        background-color: #97b8cf;
+        }
+        .cursor-gif {
+            position: fixed;
+            width: 40px;
+            height: 40px;
+            pointer-events: none;
+            z-index: 99999;
+            transform: translate(-5px, -5px);
+        }
+        img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+        a{
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Huninn&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="caixa">
+        <h1 class="subtitulo">♫ Last christmas i gave you my heart</h1>
+        <img src="../images/last_christmas_i_gave_you_my_heart.png" height="500px">
+        <audio src="Wham! - Last Christmas (Official Video) - WhamVEVO.mp3" autoplay loop></audio>
+        <a href="../index.html"><button class="botao">VOLTAR</button></a>
+    </div>
+    
+    <script>
+        const cursor = document.createElement("img");
+        cursor.src = "../images/cursor.gif";
+        cursor.classList.add("cursor-gif");
+        document.body.appendChild(cursor);
+
+        document.addEventListener("mousemove", (event) => {
+            cursor.style.left = event.clientX + "px";
+            cursor.style.top = event.clientY + "px";
+        });
+    </script>
+
+</body>
+</html>
