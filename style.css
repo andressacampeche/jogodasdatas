@@ -1,0 +1,153 @@
+@font-face {
+    font-family: 'Bubble';
+    src: url('Bubbleboddy-FatTrial.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    background-color: pink;
+    margin: 70px;
+
+}
+.titulo{
+    font-family: 'Bubble';
+    font-size: 110px;
+    background: linear-gradient(to top, #fe7bb2, #b4c0f0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    -webkit-text-stroke: 1px #a0253e;
+    paint-order: stroke fill;
+    margin-bottom: -2px;
+    
+    animation-name: flutuar;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+@keyframes flutuar {
+    0% {
+        transform: translateY(0);       /* Posição inicial */
+    }
+    100% {
+        transform: translateY(-20px);   /* Move 20 pixels para cima */
+    }
+}
+.subtitulo{
+    font-family: "Huninn", sans-serif;
+    font-size: 20px;
+    color: #90022f;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+#date{
+    width: 160px;
+    height: 50px;
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: "Huninn", sans-serif;
+    border: #b82453 solid 4px;
+}
+.botao{
+    height: max-content;
+    width: max-content;
+    padding: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #90022f;
+    font-family: "Huninn", sans-serif;
+    border-radius: 10px;
+    border: #b82453 solid 4px;
+    background: linear-gradient(to top, #fe7bb2, #b4c0f0);
+    cursor: pointer;
+}
+.botao:hover{
+    background: linear-gradient(to top, #b82453, #fe7bb2);
+    color: white;
+    zoom: 110%;
+    transition: ease-in-out 0.2s;
+}
+.fa-regular, .fa-solid{
+    color: #90022f;
+    font-size: 20px;
+}
+.caixa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#img_agulha{
+    position: absolute;
+    right: 480px;
+    top: 250px;
+    transform: rotate(15deg);
+}
+#img_disco{
+    animation-name: girar;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    animation-play-state: paused;
+}
+#img_disco.tocando{
+    animation-play-state: running;
+}
+@keyframes girar {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+#mensagem {
+    font-family: "Huninn", sans-serif;
+    color: #90022f;
+    text-align: center;
+}
+.carta {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+
+    background: #efe7e1;
+    width: 800px;
+    min-height: 300px;
+    height: auto;
+    padding: 20px;
+    box-sizing: border-box;
+
+    border-radius: 15px;
+    border: 3px solid #b82453;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.carta img {
+    display: block;
+    width: 250px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.texto-carta {
+    flex: 1;
+    min-width: 0;
+}
+#botaoMusica {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 16px;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo das Datas</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Huninn&display=swap" rel="stylesheet">
+</head>
+<body>
+    <audio id="musicaFundo" src="Style Boutique - Appartement Theme - NDS Soundtrack.mp3" autoplay loop></audio>
+    <button class="botao" id="botaoMusica" type="button">
+        <i class="fa-solid fa-volume-high"></i></button>
+
+    <div class="caixa">
+        <h1 class="titulo">Jogo das Datas</h1><br>
+        <h3 class="subtitulo">Você consegue coletar todas elas?</h3>
+        <div>
+            <input id="date" type="date" />
+            <button class="botao" id="botao" type="button">OK</button>
+        </div>
+
+        <p id="mensagem" aria-live="polite"></p>
+
+        <h3 class="subtitulo">Datas coletadas: </h3>
+        <div class="pontuacao">
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+        </div>
+        <br>
+        <button class="botao" id="botaoFinal" type="button" hidden>
+            Parabéns, você conseguiu!
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
